@@ -1,0 +1,16 @@
+@import "~react-toolbox/lib/globals";
+
+.body {
+  min-height: calc(100vh - 6.4rem);
+}
+
+.circular {
+  z-index: $z-index-highest;
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+  margin-top: -32px;
+  margin-left: -32px;
+}
