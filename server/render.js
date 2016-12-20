@@ -1,8 +1,7 @@
-import requireUncached from 'require-uncached';
-
+const requireUncached = require('require-uncached');
 const possibleUncachedRequire = ("production" !== process.env.NODE_ENV ? requireUncached : require);
 
-export default function(req, res, next) {
+module.exports = function(req, res, next) {
   const webpackStats = possibleUncachedRequire("../dist/webpack-stats.json");
   const {createHtmlResponse} = possibleUncachedRequire("../dist/main");
 

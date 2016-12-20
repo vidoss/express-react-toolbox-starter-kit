@@ -1,13 +1,16 @@
 A starter kit for react-toolbox and express.
 
-This project was created using [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was created using [Create React App](https://github.com/facebookincubator/create-react-app)
 
-## Whats included
+## Whatz included
 
 1) Express
 2) react-toolbox
+3) react-router (4.x)
+4) redux
+... see dependencies under [package.json](./package.json)
 
-## Available Scripts
+## Available Scripts (Use node 7.x)
 
 In the project directory, you can run:
 

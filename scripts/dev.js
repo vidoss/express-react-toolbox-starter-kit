@@ -11,13 +11,14 @@ var opn = require('opn');
 var detect = require('detect-port');
 var checkRequiredFiles = require('./utils/checkRequiredFiles');
 var prompt = require('./utils/prompt');
-var config = require('../config/webpack.config.dev');
+var wpConfig = require('../config/webpack.config.dev');
 var paths = require('../config/paths');
+var config = require('config');
 var runAppServer = require('./run');
 
 // DEV server port.
-var DEV_SERVER_PORT = 3000;
-var APP_SERVER_PORT = 7101;
+var DEV_SERVER_PORT = config.get('devServer.port');
+var APP_SERVER_PORT = config.get('server.port');
 
 var compiler;
 var handleCompile;
@@ -44,7 +45,7 @@ function openBrowser(port, protocol) {
 
 // Watch app server files
 function watchAppServer(protocol) {
-  webpack(config.server).watch({
+  webpack(wpConfig.server).watch({
   }, (err) => {
     if (err) { throw err; }
     console.log('');
@@ -93,7 +94,7 @@ function clearConsole() {
 function setupCompiler(port, protocol) {
   // "Compiler" is a low-level interface to Webpack.
   // It lets us listen to some events and provide our own custom messages.
-  compiler = webpack(config.client, handleCompile);
+  compiler = webpack(wpConfig.client, handleCompile);
 
   // "invalid" event fires when you have changed a file, and Webpack is
   // recompiling a bundle. WebpackDevServer takes care to pause serving the
@@ -277,7 +278,7 @@ function runDevServer(port, protocol) {
     hot: true,
     // It is important to tell WebpackDevServer to use the same "root" path
     // as we specified in the config. In development, we always serve from /.
-    publicPath: config.client.output.publicPath,
+    publicPath: wpConfig.client.output.publicPath,
     // WebpackDevServer is noisy by default so we emit custom message instead
     // by listening to the compiler events with `compiler.plugin` calls above.
     quiet: true,
