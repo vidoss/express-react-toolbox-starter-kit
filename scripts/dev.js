@@ -51,9 +51,14 @@ function watchAppServer(protocol) {
     console.log('');
     console.log(chalk.green('webpack for server bundle is watching...'));
     console.log('');
-    runAppServer( APP_SERVER_PORT, function() {
-      openBrowser( APP_SERVER_PORT, protocol);
-    });
+
+    detect(APP_SERVER_PORT).then(port => {
+      if (port === APP_SERVER_PORT) {
+        runAppServer( APP_SERVER_PORT, function() {
+          openBrowser( APP_SERVER_PORT, protocol);
+        });
+      }
+    })
   });
 }
 
@@ -119,12 +124,8 @@ function setupCompiler(port, protocol) {
       console.log('Note that the development build is not optimized.');
       console.log('To create a production build, use ' + chalk.cyan('npm run build') + '.');
       console.log();
-      detect(APP_SERVER_PORT).then(port => {
-        if (port === APP_SERVER_PORT) {
-          watchAppServer(protocol);
-          return;
-        }
-      })
+
+      watchAppServer(protocol);
       return;
     }
 

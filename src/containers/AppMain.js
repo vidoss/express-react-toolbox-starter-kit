@@ -5,7 +5,7 @@ const StandardLayout  = require('../common/containers/StandardLayout');
 const AppMain = () => (
   <BrowserRouter>
     <StandardLayout>
-      <h1> App here... </h1>
+      <h1>:-)</h1>
     </StandardLayout>
   </BrowserRouter>
 );

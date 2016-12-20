@@ -141,7 +141,7 @@ var clientConfig = {
         include: [paths.appSrc],
         loader: 'file',
         query: {
-          name: 'favicon.ico?[hash:8]'
+          name: 'static/media/favicon.ico?[hash:8]'
         }
       },
       // "url" loader works just like "file" loader but it also embeds

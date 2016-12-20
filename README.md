@@ -4,13 +4,13 @@ This project was created using [Create React App](https://github.com/facebookinc
 
 ## Whatz included
 
-1) Express
-2) react-toolbox
-3) react-router (4.x)
-4) redux
-... see dependencies under [package.json](./package.json)
+- Express
+- react-toolbox
+- react-router (4.x)
+- redux
+- ... see dependencies under [package.json](./package.json)
 
-## Available Scripts (Use node 7.x)
+## Available Scripts (Use node 6.x or 7.x)
 
 In the project directory, you can run:
 

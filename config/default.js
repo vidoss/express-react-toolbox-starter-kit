@@ -1,5 +1,5 @@
 const pkg = require('../package.json');
-
+const messages = require('./messages.json');
 // ports.
 const DEV_SERVER_PORT   = 3000;
 const APP_SERVER_PORT   = 7101;
@@ -55,5 +55,6 @@ const devServer = {
 module.exports = {
   contentSecurityPolicy,
   server,
-  devServer
+  devServer,
+  messages
 }

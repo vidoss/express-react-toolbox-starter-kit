@@ -10,6 +10,7 @@ module.exports = function(req, res, next) {
     request: {
       path: req.path,
       query: req.query,
+      user: req.user
     },
   })
   .then(({status, pathname, body}) => {
