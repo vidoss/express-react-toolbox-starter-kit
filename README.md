@@ -40,10 +40,12 @@ To start the server in production.
 ## Getting started in github
 Go to github console and create new project __myapp__ under __myusername__
 
-`git clone https://github.com/vidoss/express-react-toolbox-starter-kit.git myapp`
-`cd myapp`
-`git remote rm origin`
-`git remote add origin https://github.com/myusername/myapp.git`
-`git push origin master`
-`yarn install`
-`yarn run dev`
+```
+git clone https://github.com/vidoss/express-react-toolbox-starter-kit.git myapp
+cd myapp
+git remote rm origin
+git remote add origin https://github.com/myusername/myapp.git
+git push origin master
+yarn install
+yarn run dev
+```
