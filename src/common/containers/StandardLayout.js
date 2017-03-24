@@ -1,6 +1,6 @@
 const React = require('react');
 const { AppBar, Layout, NavDrawer, Panel, ProgressBar, Snackbar } = require('react-toolbox');
-const theme = require('./StandardLayout.scss');
+const theme = require('./StandardLayout.css');
 const {getMessage} = require('../utils/MessageUtil');
 const {connect} = require('react-redux');
 const {AppActions} = require('../actions');

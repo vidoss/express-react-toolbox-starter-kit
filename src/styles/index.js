@@ -1,1 +1,1 @@
-require('react-toolbox/lib/commons.scss');
+require('normalize.css')

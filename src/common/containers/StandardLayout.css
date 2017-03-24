@@ -1,11 +1,11 @@
-@import "~react-toolbox/lib/globals";
+@import "react-toolbox/lib/variables.css";
 
 .body {
   min-height: calc(100vh - 6.4rem);
 }
 
 .circular {
-  z-index: $z-index-highest;
+  z-index: var(--z-index-highest);
   position: fixed;
   width: 64px;
   height: 64px;
